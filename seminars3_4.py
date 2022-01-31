@@ -253,23 +253,29 @@ for k in range(len(list1)):
          else:
              list1[k] = float(list1[k])/10**max_len
 print(list1)
-min = float(1.0000)
-max = float(0)
-for m in list1:
-    if m<min:
-        min = m
-for m in list1:
-    if m>max:
-        max = m
-print(max)
-print(min)
-print(max-min)
+print(max(list1) - min(list1))
+# min = float(1.0000)
+# max = float(0)
+# for m in list1:
+#     if m<min:
+#         min = m
+# for m in list1:
+#     if m>max:
+#         max = m
+# print(max)
+# print(min)
+# print(max-min)
 
 
-
-# print(list_numbers_elements) #позиция минимальных элементов?
-# print(max_len) #количество знаков после запятой
-#
+# list1 = [1.1, 1.02, 3.1, 5, 10.01]
+# def min_max(list):
+#     nums = [x - int(x) for x in (list)]
+#     print(nums)
+#     print (max(nums))
+#     print(min(nums))
+#     return max(nums) - min(nums)
+# print(min_max(list1))
+# print(0.1-0.01)
 
 
 
