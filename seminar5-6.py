@@ -103,19 +103,57 @@
 
  #36. Дан список чисел. Выделить среди них числа, удовлетворяющие условию:
  #  следующее больше предыдущего. Пример: [1, 5, 2, 3, 4, 6, 1, 7] => [1, 2, 3] или [1, 7] или [1, 6, 7] и т.д.
-li = [1, 5, 2, 3, 4, 6, 1, 7, 10]
-def f(li1):
-    li2=[]
-    for i in range(0, len(li1)-2):
-        if li[i]<li[i+1]<li[i+2]:
-            li2.append(li[i+1])
-    if li[0]<li2[0]:
-        li2.insert(0, li[0])
-    if li[len(li)-1]>li2[len(li2)-1]:
-        li2.append(li[len(li)-1])
-           
-                        
-    return(li2)
-print(f(li))
+# from cgitb import text
 
+
+# li = [1, 5, 2, 3, 85, 4, 6, 1, 7, 10, 12]
+# def f(li1):
+#     li2=[]
+#     for i in range(0, len(li1)-2):
+#         if li[i]<li[i+1]<li[i+2]:
+#             li2.append(li[i+1])
+#     if li[0]<li2[0]:
+#         li2.insert(0, li[0])
+#     if li[len(li)-1]>li2[len(li2)-1]:
+#         li2.append(li[len(li)-1])
+                   
+#     return(li2)
+# print(f(li))
+ #38. Напишите программу, удаляющую из текста все слова содержащие "иц".
+text= '''Для вас, души моей царицы,
+        Красавицы, для вас одних
+        Времен минувших небылицы,
+        В часы досугов золотых,
+        Под шепот старины болтливой,
+        Рукою верной я писал;
+        Примите ж вы мой труд игривый!
+        Ничьих не требуя похвал,
+        Счастлив уж я надеждой сладкой,
+        Что дева с трепетом любви
+        Посмотрит, может быть, украдкой
+        На песни грешные мои.'''
+li1 = text.split()
+
+def find(list_1):
+      list_minus=[]
+      for i in range(0, len(li1)):
+          if li1[i].find('иц') != -1:
+                list_minus.append(i) #Находим индексы слов, которые надо выкинуть
+      return list_minus
+num = find(li1)
+#print(type(num))
+def res(list_2, num_1):
+      for m in num:
+          list_2[m] = ''
+      return list_2
+res_list = res(li1, num)
+#print(res_list)
+res_string = ' '.join(res_list)
+print(res_string)
+            
+                  
+            
+
+
+# попробоватть filter
 
