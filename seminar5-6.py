@@ -119,41 +119,60 @@
                    
 #     return(li2)
 # print(f(li))
+
+
  #38. Напишите программу, удаляющую из текста все слова содержащие "иц".
-text= '''Для вас, души моей царицы,
-        Красавицы, для вас одних
-        Времен минувших небылицы,
-        В часы досугов золотых,
-        Под шепот старины болтливой,
-        Рукою верной я писал;
-        Примите ж вы мой труд игривый!
-        Ничьих не требуя похвал,
-        Счастлив уж я надеждой сладкой,
-        Что дева с трепетом любви
-        Посмотрит, может быть, украдкой
-        На песни грешные мои.'''
-li1 = text.split()
+# text= '''Для вас, души моей царицы,
+#         Красавицы, для вас одних
+#         Времен минувших небылицы,
+#         В часы досугов золотых,
+#         Под шепот старины болтливой,
+#         Рукою верной я писал;
+#         Примите ж вы мой труд игривый!
+#         Ничьих не требуя похвал,
+#         Счастлив уж я надеждой сладкой,
+#         Что дева с трепетом любви
+#         Посмотрит, может быть, украдкой
+#         На песни грешные мои.'''
+# li1 = text.split()
 
-def find(list_1):
-      list_minus=[]
-      for i in range(0, len(li1)):
-          if li1[i].find('иц') != -1:
-                list_minus.append(i) #Находим индексы слов, которые надо выкинуть
-      return list_minus
-num = find(li1)
-#print(type(num))
-def res(list_2, num_1):
-      for m in num:
-          list_2[m] = ''
-      return list_2
-res_list = res(li1, num)
-#print(res_list)
-res_string = ' '.join(res_list)
-print(res_string)
-            
-                  
-            
+# def find(list_1):
+#       list_minus=[]
+#       for i in range(0, len(li1)):
+#           if li1[i].find('иц') != -1:
+#                 list_minus.append(i) #Находим индексы слов, которые надо выкинуть
+#       return list_minus
+# num = find(li1)
 
+# def res(list_2, num_1):
+#       for m in num:
+#           list_2[m] = ''
+#       return list_2
+# res_list = res(li1, num)
+# print(res_list)
+                ## С Фильтром
 
-# попробоватть filter
+# res_list = list(filter(lambda x: x.find('иц') == -1, li1))
+# res_string = ' '.join(res_list)
+# print(res_string)
 
+# li = [1,2,3,4,5,6,7,8,9,10]
+# good = list(filter(lambda x: x%2 ==0 and x%3 !=0, li))
+# bad = list(filter(lambda x: not (x%2 ==0 and x%3 !=0) , li))
+
+# print(li)
+# print(good)                 
+# print(bad)                 
+
+# def myfilter(cond, lst):
+#   res = []
+#   for x in lst:
+#     if cond(x):
+#       res.append(x)
+#   return res
+
+# mygood = list(myfilter(lambda x: x%2 ==0 and x%3 !=0, li))
+# mybad = list(myfilter(lambda x: not (x%2 ==0 and x%3 !=0) , li))
+
+# print(mygood)
+# print(mybad)
