@@ -228,40 +228,108 @@
 #24. В заданном списке вещественных чисел найдите разницу между максимальным 
 # и минимальным значением дробной части элементов. Пример: [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-list = [1.1, 1.02, 3.1, 5, 10.01]
-for i in range(len(list)):
-    list[i] = str(list[i]).split('.')
-#print(list)
-list1 = []
-for i in list:
-    if len(i)>1:
-        list1.append(i[1])
+# list = [1.1, 1.02, 3.1, 5, 10.01]
+# for i in range(len(list)):
+#     list[i] = str(list[i]).split('.')
+# #print(list)
+# list1 = []
+# for i in list:
+#     if len(i)>1:
+#         list1.append(i[1])
 #print(list1)
-max_len = 1
-list_numbers_elements = []
-for j in range(len(list1)): #ищем длинные элементы
-    if len(list1[j])>=max_len:
-        max_len = len(list1[j])
-        list_numbers_elements.append(j)
-if len(list1[0])<max_len:
-    list_numbers_elements = list_numbers_elements[1:]
-#print(list_numbers_elements)#получили позиции минимальных элементов
-for k in range(len(list1)):
-     for m in list_numbers_elements:
-         if k!=m:
-             list1[k] = float(list1[k])
-         else:
-             list1[k] = float(list1[k])/10**max_len
-print(list1)
-print(max(list1) - min(list1))
+# max_len = 1
+# list_numbers_elements = []
+# for j in range(len(list1)): #ищем длинные элементы
+#     if len(list1[j])>=max_len:
+#         max_len = len(list1[j])
+#         list_numbers_elements.append(j)
+# if len(list1[0])<max_len:
+#     list_numbers_elements = list_numbers_elements[1:]
+# #print(list_numbers_elements)#получили позиции минимальных элементов
+# for k in range(len(list1)):
+#      for m in list_numbers_elements:
+#          if k!=m:
+#              list1[k] = float(list1[k])
+#          else:
+#              list1[k] = float(list1[k])/10**max_len
+# print(list1)
+# print(max(list1) - min(list1))
+
+#25. Написать программу преобразования десятичного числа в двоичное
+# res = []
+# def make_double(n):
+#     print(type(n))
+#     while n>2:
+#         k = n/2
+#         print (k)
+#         res.append(int(n%2))
+#         n=k
+#     res.append(1)
+#     res1 = list(reversed(res))
+
+#     return (res1)
+# print(make_double(80))
+
+# def make_double(n):
+#     res = []
+#     if n < 2:
+#          return n
+#     return res.append(make_double(n/2%2))
+# print(make_double(100))
+
+#26  Дано число. Составить список чисел Фибоначчи, в том числе для отрицательных индексов
+# [5, −3,  2, −1,  1, 0, 1, 1, 2, 3, 5] 
+# def list_creation(n):
+#      return [x for x in range(-n, n+1)]
+# def fibonachi(n):
+#     if n <= 2:
+#         return 1
+#     else:
+#         return (fibonachi(n-1) + fibonachi(n-2))
+# print(fibonachi(5))
+
+# import operator
+# def fibbonachi (n):
+#     fib = [0, 1, 1]
+#     for i in range(1,n):
+#         fib.append(fib[len(fib) - 1] + fib[len(fib) - 2])
+#     pmone = [i%2*2 - 1 for i in range(1,n + 2)] # [1, -1, 1 ...]
+#     negarive_fib = list(reversed(list(map(operator.mul, fib[1:], pmone))))
+
+#     return negarive_fib + fib
+
+# print(fibbonachi(12))
+# print()
+
+
+# prev = 1
+# prevprev = 1
+# for i in range(3,10):
+#     current = prev + prevprev
+#     print(i, current)
+#     prevprev = prev
+#     prev = current
+#27. Строка содержит набор чисел. Показать большее и меньшее число
+# data = '1 2 3 4 5 6 60'.split()
+# def select(f, col):
+#     return[f(x) for x in col]
+
+# res = select(int, data)
+# print(res)
+# print(min(res))
+# print(max(res))
+
+# 28. Найти корни квадратного уравнения Ax² + Bx + C = 0
+#    1. Математикой
+#    2. Используя дополнительные библиотеки*
 
 
 
-    
+         
 
+     
 
-    
-    
+   
 
 
 
