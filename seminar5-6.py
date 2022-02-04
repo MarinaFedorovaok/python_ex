@@ -84,6 +84,25 @@
 # with open ("34.txt", 'w') as file:
 #     file.write(result)
 
+ #34. Даны два файла в каждом из которых находится запись многочлена. 
+ # Сформировать файл содержащий сумму корней многочленов.
+from asyncore import write
+import numpy as np
+def count_roots(file_name):
+    with open(file_name) as f1:
+        part1 = f1.read().split()
+    print(part1)
+    part2 = list(filter(lambda x: x !="+", part1))
+    print(part2)
+    part3 = list(map(lambda x: x[0], part2))
+    print(part3)
+    res = np.roots(part3)
+    return res
+f='f1_34.txt'
+with open('f2_34.txt', 'w') as f2:
+    f2.write(str(count_roots(f)))
+
+
  #35. В файле находится N натуральных чисел, записанных через пробел. 
  # Среди чисел не хватает одного, чтобы выполнялось условие A[i] - 1 = A[i-1]. Найти его.
  # В файле находится N натуральных чисел, записанных через пробел. 
