@@ -158,11 +158,8 @@
 
 # li = [1,2,3,4,5,6,7,8,9,10]
 # good = list(filter(lambda x: x%2 ==0 and x%3 !=0, li))
-# bad = list(filter(lambda x: not (x%2 ==0 and x%3 !=0) , li))
-
 # print(li)
 # print(good)                 
-# print(bad)                 
 
 # def myfilter(cond, lst):
 #   res = []
@@ -172,7 +169,5 @@
 #   return res
 
 # mygood = list(myfilter(lambda x: x%2 ==0 and x%3 !=0, li))
-# mybad = list(myfilter(lambda x: not (x%2 ==0 and x%3 !=0) , li))
 
 # print(mygood)
-# print(mybad)
