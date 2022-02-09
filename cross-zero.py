@@ -9,6 +9,8 @@ def motion(field, num_player):
     # np.put(field, [x1-1, y1-1], 1)
     field[x1-1][y1-1] = num_player
     return(field)
-#добавить условие - пока клетки не равно 0
-print(motion(field, 1))
-print(motion(field, 2))
+#добавить условие - пока [хотя бы 1 клетка равно 0
+for i in field:
+    while i.any ==0:
+        print(motion(field, 1))
+        print(motion(field, 2))
