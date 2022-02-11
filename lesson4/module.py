@@ -5,6 +5,5 @@ def init(a, b):
     global y
     x= a
     y=b
-init(12, 10)
-print(x)
-print(y)
+def sum():
+    return x+y
