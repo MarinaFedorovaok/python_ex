@@ -57,16 +57,47 @@ def friend(x):
 #  each taken only once - coming from s1 or s2.
 s1 = "xyaabbbccccdefww"
 s2 = "xxxxyyyyabklmopq"
-def filter_double(s1):
-    #проверяем на уникальность строку
-    s1_res=[]
-    for i in range(len(s1)-1):
-        if s1[i] != s1[i+1]:
-            s1_res.append(s1[i])
-    return s1_res
-l1 = filter_double(s1)
-l2 = filter_double(s2)
-second_part_str = ''.join((filter(lambda s: s not in l1, l2)))
-firts_part =''.join(l1) 
-result = firts_part+second_part_str
-print(result)
+print (s1[0]>s1[1 ])
+# def filter_double(s1):
+#     #проверяем на уникальность строку
+#     s1_res=[]
+#     for i in range(len(s1)-1):
+#         if s1[i] != s1[i+1]:
+#             s1_res.append(s1[i])
+#     return s1_res
+# l1 = filter_double(s1)
+# l2 = filter_double(s2)
+# second_part_str = ''.join((filter(lambda s: s not in l1, l2)))
+# firts_part =''.join(l1) 
+# result = firts_part+second_part_str
+# print(result)
+
+#Вариант с 1 методом для кодворс:
+# def longest(a1, a2):
+#     s1_res=[]
+#     for i in range(len(a1)-1):
+#         if a1[i] != a1[i+1]:
+#             s1_res.append(a1[i])
+#     s2_res=[]
+#     for i in range(len(a2)-1):
+#         if a2[i] != a2[i+1]:
+#             s2_res.append(a2[i])
+#     second_part_str = ''.join((filter(lambda s: s not in s1_res, s2_res)))
+#     firts_part =''.join(s1_res) 
+#     result = firts_part+second_part_str
+#     return result
+
+def longest(a1, a2):
+    a1=set(a1)
+    a2=set(a2)
+    a3 = a1.union(a2)
+    li = []
+    for i in a3:
+        li.append(i)
+    li = sorted(li)
+    result = ''.join(li)
+    return result
+print(longest(s1, s2))
+
+#print(longest(s1, s2))
+# задача понята не верно. нужно по возрастанию
