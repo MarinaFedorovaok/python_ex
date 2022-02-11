@@ -46,9 +46,10 @@ l2 = ["Ryan", "Jason"]
 # out_filter = list(filter(filter_duplicate, l2))
 
 #  С лямбдой
-def friend(l1, l2):
-    filtered_str = ' '.join((filter(lambda s: s in l2, l1)))
+def friend(x):
+    filtered_str = list(filter(lambda s: len(s)==4, x))
     return filtered_str
+
 
 print("Отфильтрованный список:", friend(l1, l2))
 
