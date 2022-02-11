@@ -51,6 +51,22 @@ def friend(x):
     return filtered_str
 
 
-print("Отфильтрованный список:", friend(l1, l2))
+#print("Отфильтрованный список:", friend(l1, l2))
 
-    
+# Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible, containing distinct letters -
+#  each taken only once - coming from s1 or s2.
+s1 = "xyaabbbccccdefww"
+s2 = "xxxxyyyyabklmopq"
+def filter_double(s1):
+    #проверяем на уникальность строку
+    s1_res=[]
+    for i in range(len(s1)-1):
+        if s1[i] != s1[i+1]:
+            s1_res.append(s1[i])
+    return s1_res
+l1 = filter_double(s1)
+l2 = filter_double(s2)
+second_part_str = ''.join((filter(lambda s: s not in l1, l2)))
+firts_part =''.join(l1) 
+result = firts_part+second_part_str
+print(result)
