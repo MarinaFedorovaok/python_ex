@@ -21,6 +21,8 @@ def max(n):
 n = [1,2,2,3,3]
 def unic_order(n):
     k = list(map(lambda x:x, n))
+    if len(k) == 0:
+         return k
     res = []
     res.append(k[0])
     for i in range(1, len(k)):
