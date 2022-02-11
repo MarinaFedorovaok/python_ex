@@ -29,6 +29,27 @@ def unic_order(n):
         if k[i] !=k[i-1]:
             res.append(k[i])
     return res
-print(unic_order(n))
+#print(unic_order(n))
+# Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+# If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+l1 = ["Ryan", "Kieran", "Jason", "Yous"] 
+l2 = ["Ryan", "Jason"]
+
+# def filter_duplicate(string_to_check):
+#     if string_to_check in ll:
+#         return True
+#     else:
+#         return False
+# ll = l1
+# out_filter = list(filter(filter_duplicate, l2))
+
+#  С лямбдой
+def friend(l1, l2):
+    filtered_str = ' '.join((filter(lambda s: s in l2, l1)))
+    return filtered_str
+
+print("Отфильтрованный список:", friend(l1, l2))
 
     
