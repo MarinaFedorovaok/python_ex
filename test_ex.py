@@ -57,7 +57,7 @@ def friend(x):
 #  each taken only once - coming from s1 or s2.
 s1 = "xyaabbbccccdefww"
 s2 = "xxxxyyyyabklmopq"
-print (s1[0]>s1[1 ])
+#print (s1[0]>s1[1 ])
 # def filter_double(s1):
 #     #проверяем на уникальность строку
 #     s1_res=[]
@@ -100,4 +100,4 @@ def longest(a1, a2):
 print(longest(s1, s2))
 
 #print(longest(s1, s2))
-# задача понята не верно. нужно по возрастанию
+
