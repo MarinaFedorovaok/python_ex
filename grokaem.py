@@ -5,7 +5,7 @@ def binary_search(list, item):
     while low <=high:
         mid = (low+high)//2
         guess = list[mid]
-        print(mid)
+        #print(mid)
         if guess == item:
             return mid
         if guess >item:
@@ -14,6 +14,18 @@ def binary_search(list, item):
             low = mid+1
     return None
 my_list = [1, 3, 5, 7, 8, 9, 24, 35, 3521, 423423]
-print(binary_search(my_list, 3))
+#print(binary_search(my_list, 3))
 # for i in my_list:
 #     print(binary_search(my_list, i))
+
+# Рекурсия
+def countdown(i):
+    print(i)
+    if i <=0:
+        return 0
+    else:
+        countdown(i-1)
+        
+countdown(10)
+
+
