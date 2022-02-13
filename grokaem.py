@@ -1,4 +1,7 @@
 # бинарный поиск
+from random import random
+
+
 def binary_search(list, item):
     low = 0
     high = len(list) - 1
@@ -30,11 +33,28 @@ def countdown(i):
 
 #Стек вызовов
 
-def sum_li(n):
+def sum(n):
     
     if n<=0:
         return 0
     else:
-       return n%10 + sum_li(n//10)
-print(sum_li(2567))
-#p 84
+       return n%10 + sum(n//10)
+#print(sum(2567))
+#рекурсия для посчета суммы элементов в списке
+import random
+
+def sum_li(li, len):
+    
+    if len==0:
+         return 0
+    else:
+        return li[len-1]+sum_li(li, len-1)
+li = []
+len = 5
+for i in range(len):
+    li.append(random.randint(0, 5))
+print(li)
+
+print(sum_li (li, len))
+
+
