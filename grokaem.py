@@ -53,8 +53,7 @@ li = []
 len = 5
 for i in range(len):
     li.append(random.randint(0, 5))
-print(li)
+# print(li)
 
-print(sum_li (li, len))
-
+# print(sum_li (li, len))
 
