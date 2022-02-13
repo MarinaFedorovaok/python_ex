@@ -26,6 +26,15 @@ def countdown(i):
     else:
         countdown(i-1)
         
-countdown(10)
+#countdown(10)
 
+#Стек вызовов
 
+def sum_li(n):
+    
+    if n<=0:
+        return 0
+    else:
+       return n%10 + sum_li(n//10)
+print(sum_li(2567))
+#p 84
