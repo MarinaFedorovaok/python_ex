@@ -30,5 +30,5 @@ def pict(update: Update, context: CallbackContext):
     photo_file = open("saved_figure.png",'rb')
     context.bot.sendPhoto(chat_id=update.message.chat_id,
                             photo=photo_file,
-                            caption="sin {a}, {b}, {c}")
+                            caption=(f'sin {a}, {b}, {c}'))
  
